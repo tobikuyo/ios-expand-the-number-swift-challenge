@@ -6,19 +6,12 @@ func expandTheNumber(_ number: Int) -> [Int] {
     
     switch digitArray.count {
     case 3:
-        let first = digitArray[0] * 100
-        let second = digitArray[1] * 10
-        
-        digitArray[0] = first
-        digitArray[1] = second
+        digitArray[0] *= 100
+        digitArray[1] *= 10
     case 4:
-        let first = digitArray[0] * 1000
-        let second = digitArray[1] * 100
-        let third = digitArray[2] * 10
-        
-        digitArray[0] = first
-        digitArray[1] = second
-        digitArray[2] = third
+        digitArray[0] *= 1000
+        digitArray[1] *= 100
+        digitArray[2] *= 10
     default:
         digitArray
     }
